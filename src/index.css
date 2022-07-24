@@ -1,0 +1,152 @@
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background-color: var(--cream);
+}
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+#main-box {
+  display: flex;
+  width: 700px;
+  height: 500px;
+  border-radius: 10px;
+}
+.image-box {
+  width: 50%;
+  border-radius: 10px 0 0 10px;
+}
+.image-box img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px 0 0 10px;
+}
+.content-box {
+  width: 50%;
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 0 10px 10px 0;
+}
+.content-box__perfume__text {
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  color: var(--dark-grayish-blue);
+}
+.content-box__header {
+  margin: 15px 0 25px 0;
+}
+.content-box__header__heading {
+  line-height: 40px;
+  font-family: "Fraunces", serif;
+  font-size: 40px;
+}
+.content-box__text--primary {
+  color: var(--dark-grayish-blue);
+  line-height: 25px;
+  font-size: 17px;
+}
+.content-box__price {
+  margin: 30px 0;
+}
+.content-box__price--main {
+  font-family: "Fraunces", serif;
+  color: var(--dark-cyan);
+  font-size: 32px;
+  display: inline-block;
+}
+.content-box__price--second {
+  color: var(--dark-grayish-blue);
+  text-decoration: line-through;
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+}
+.content-box__button--primary {
+  background-color: var(--dark-cyan);
+  background-image: url(../public/icon-cart.svg);
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: 70px;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: bold;
+  height: 55px;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+}
+.content-box__button--primary:hover {
+  background-color: var(--very-dark-blue);
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  #root {
+    align-items: flex-start;
+  }
+  #main-box {
+    flex-direction: column;
+    min-width: 330px;
+    width: 350px;
+    height: 100%;
+    margin: 15px;
+  }
+  .image-box {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+  .image-box img {
+    border-radius: 10px 10px 0 0;
+  }
+  .content-box {
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+  }
+  .content-box__perfume__text {
+    font-size: 13px;
+  }
+  .content-box__header {
+    margin: 15px 0 20px 0;
+  }
+  .content-box__header__heading {
+    line-height: 32px;
+    font-size: 32px;
+  }
+  .content-box__text--primary {
+    line-height: 24px;
+    font-size: 13.9px;
+  }
+  .content-box__price {
+    margin: 25px 0 20px 0;
+  }
+  .content-box__price--main {
+    font-size: 30px;
+  }
+  .content-box__price--second {
+    left: 7%;
+  }
+  .content-box__button--primary {
+    height: 50px;
+    background-position: 65px;
+  }
+  .content-box__button--primary:focus {
+    background-color: var(--very-dark-blue);
+    cursor: pointer;
+  }
+}
